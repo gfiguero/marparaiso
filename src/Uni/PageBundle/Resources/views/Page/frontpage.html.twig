@@ -1,8 +1,9 @@
 {% block stylesheet %}
-    {% set photo = random(frontpage.frontpagephotos) %}
-    <style type="text/css">
-    .header-image {
-        background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('{{ asset(photo.webpath) | imagine_filter('page_frontpage') }}');
-    }
-    </style>
+    {% if frontpage is not empty and frontpage.frontpagephotos is not empty %}
+        {% set photo = random(frontpage.frontpagephotos) %}
+        {% set webpath = photo.webpath %}
+    {% else %}
+        {% set webpath = 'default' %}
+    {% endif %}
+    <style type="text/css">.header-image { background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('{{ asset(webpath) | imagine_filter('page_frontpage') }}'); }</style>
 {% endblock %}

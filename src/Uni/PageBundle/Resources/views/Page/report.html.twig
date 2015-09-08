@@ -12,7 +12,7 @@
                     <div class="site-heading">
                         <h1>{{ "report_index"|trans }}</h1>
                         <hr class="small">
-                        <span class="subheading">{{ frontpage.frontpagetitle }}</span>
+                        <span class="subheading">{% if frontpage %}{{ frontpage.frontpagetitle }}{% endif %}</span>
                     </div>
                 </div>
             </div>

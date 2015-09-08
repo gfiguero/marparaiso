@@ -6,9 +6,9 @@
                     <h2 class="section-heading">Contacto</h2>
                 </div>
                 <div class="col-md-12">
-                    <p class="text-muted">{{ icon('envelope fa-2x') }}&nbsp;{{ frontpage.frontpageemail }}</p>
-                    <p class="text-muted">{{ icon('phone fa-2x') }}&nbsp;{{ frontpage.frontpagephonenumber }}</p>
-                    <p class="text-muted">{{ icon('map-marker fa-2x') }}&nbsp;{{ frontpage.frontpageaddress }}</p>
+                    <p class="text-muted">{{ icon('envelope fa-2x') }}&nbsp;{% if frontpage %}{{ frontpage.frontpageemail }}{% endif %}</p>
+                    <p class="text-muted">{{ icon('phone fa-2x') }}&nbsp;{% if frontpage %}{{ frontpage.frontpagephonenumber }}{% endif %}</p>
+                    <p class="text-muted">{{ icon('map-marker fa-2x') }}&nbsp;{% if frontpage %}{{ frontpage.frontpageaddress }}{% endif %}</p>
                 </div>
             </div>
         </div>

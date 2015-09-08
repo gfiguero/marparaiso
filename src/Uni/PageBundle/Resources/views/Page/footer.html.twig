@@ -6,17 +6,17 @@
                     <ul class="list-inline text-center">
                         <li>
                             <p class="copyright text-muted">
-                                {{ icon('envelope fa-fw') }}&nbsp;{{ frontpage.frontpageemail }}
+                                {{ icon('envelope fa-fw') }}&nbsp;{% if frontpage %}{{ frontpage.frontpageemail }}{% endif %}
                             </p>
                         </li>
                         <li>
                             <p class="copyright text-muted">
-                                {{ icon('phone fa-fw') }}&nbsp;{{ frontpage.frontpagephonenumber }}
+                                {{ icon('phone fa-fw') }}&nbsp;{% if frontpage %}{{ frontpage.frontpagephonenumber }}{% endif %}
                             </p>
                         </li>
                         <li>
                             <p class="copyright text-muted">
-                                {{ icon('map-marker fa-fw') }}&nbsp;{{ frontpage.frontpageaddress }}
+                                {{ icon('map-marker fa-fw') }}&nbsp;{% if frontpage %}{{ frontpage.frontpageaddress }}{% endif %}
                             </p>
                         </li>
                     </ul>
